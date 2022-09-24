@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class WayPint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] bool convert;
+    [SerializeField] GameObject towers;
+    GameObject parentTowers;
+    public bool isconvert { get { return convert; } }
 
-    // Update is called once per frame
-    void Update()
+    public void Start()
     {
-        
+        parentTowers = GameObject.FindWithTag("parentTowers");
+    }
+    private void OnMouseDown()
+    {
+        if (convert==true) 
+        {
+
+            GameObject newTower= Instantiate(towers, transform.position, Quaternion.identity);
+            newTower.transform.parent = parentTowers.transform;
+            convert = false;
+
+        }
     }
 }
