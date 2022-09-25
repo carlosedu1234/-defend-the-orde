@@ -5,13 +5,14 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
 
-    [SerializeField][Range(1,20)] int maxlife=2;
-    WayPint disable;
-    
-     void Update()
+    [SerializeField] int maxlife=2;
+    [SerializeField] int hitPoints = 0;
+
+    private void OnEnable()
     {
-        disable = GetComponent<WayPint>();
+        hitPoints = maxlife;
     }
+
     private void OnParticleCollision(GameObject other)
         
     {
@@ -22,13 +23,13 @@ public class EnemyHealth : MonoBehaviour
 
     void PhMax() {
 
-        maxlife--;
+        hitPoints--;
 
-        if (maxlife<1) {
+        if (hitPoints < 1) {
 
-            
-            Destroy(gameObject);
-        
+
+            gameObject.SetActive(false);
+
         }
     
     }

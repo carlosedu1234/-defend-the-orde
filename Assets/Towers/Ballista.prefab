@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28fc47e698545974c9c8cf84a8ca3a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ProyectilMateial: {fileID: 1202335377756582773}
   waypint: {fileID: 3144582324300694500}
-  target: {fileID: 0}
+  range: 15
 --- !u!1 &3578039479131219808
 GameObject:
   m_ObjectHideFlags: 0
