@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Enemy))]
 public class EnemyMove : MonoBehaviour
 {
 
     [SerializeField] List<WayPint> coordinates = new List<WayPint>();
     [SerializeField] [Range (0f,5f)]float speed=1f;
+    Enemy penalEnemy;
    
 
     // Start is called before the first frame update
@@ -21,7 +23,10 @@ public class EnemyMove : MonoBehaviour
     }
 
 
-  
+    private void Start()
+    {
+        penalEnemy = GetComponent<Enemy>();
+    }
 
     void StarPath()
     {
@@ -35,20 +40,27 @@ public class EnemyMove : MonoBehaviour
 
         coordinates.Clear();
 
-        GameObject[] waipoints = GameObject.FindGameObjectsWithTag("Path");
+        GameObject parent = GameObject.FindGameObjectWithTag("Path");
 
-        foreach (GameObject waypont in waipoints)
+        foreach (Transform child in parent.transform)
         {
-
-            coordinates.Add(waypont.GetComponent<WayPint>()); ;
-        }
+            WayPint waipoint = child.GetComponent<WayPint>();
+            if (waipoint!=null) { 
+            coordinates.Add(waipoint); ;
+        } }
     }
 
 
 
+    void FindPath() {
+
+        penalEnemy.Penalenemy();
+        gameObject.SetActive(false);
 
 
-        IEnumerator WathCoor() {
+    }
+
+    IEnumerator WathCoor() {
 
         foreach (WayPint warpoint in coordinates) {
 
@@ -58,7 +70,9 @@ public class EnemyMove : MonoBehaviour
 
             transform.LookAt(endPosition);
 
-            while (interval < 1) {
+            while (interval < 1) 
+            
+            {
 
                 interval += Time.deltaTime * speed;
                 transform.position = Vector3.Lerp(starPosition,endPosition,interval);
@@ -68,12 +82,12 @@ public class EnemyMove : MonoBehaviour
                     
             
             }
+            
 
           
         }
 
-        gameObject.SetActive(false);
-
+        FindPath();
 
 
     }

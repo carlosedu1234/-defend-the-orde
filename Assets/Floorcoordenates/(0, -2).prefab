@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   convert: 1
-  towers: {fileID: 3219458064393657486, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+  TowerPrefac: {fileID: 2264259914969604516, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
 --- !u!65 &6991987192846103133
 BoxCollider:
   m_ObjectHideFlags: 0

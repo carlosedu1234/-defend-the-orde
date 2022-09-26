@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemySpaw : MonoBehaviour
 {
     [SerializeField] GameObject enemys;
-    [SerializeField] int poolsize = 5;
-    [SerializeField] float timeSpaw = 2f;
+    [SerializeField] [Range(0, 50)] int poolsize = 5;
+    [SerializeField] [Range (0.1f,30f)]float timeSpaw = 2f;
     GameObject[] pool;
 
     // Update is called once per frame

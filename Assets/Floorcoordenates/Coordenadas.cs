@@ -5,6 +5,7 @@ using TMPro;
 using System;
 
 [ExecuteAlways]
+[RequireComponent(typeof(TextMeshPro))]
 
 public class Coordenadas : MonoBehaviour
 {
@@ -31,18 +32,21 @@ public class Coordenadas : MonoBehaviour
 
             DirCoordenadas();
             UpdateOvjectName();
-
+            label.enabled = true;
         }
-        GetColor();
+        SetLabelColor();
         DisableLabe();
+        
     }
 
-    void GetColor() {
+    void SetLabelColor() {
+
+
         if (waipon.isconvert)
         {
 
             label.color = defaultColor;
-
+           
         }
         else { label.color = blockColor; }
 

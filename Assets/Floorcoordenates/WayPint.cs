@@ -5,23 +5,18 @@ using UnityEngine;
 public class WayPint : MonoBehaviour
 {
     [SerializeField] bool convert;
-    [SerializeField] GameObject towers;
-    GameObject parentTowers;
+    [SerializeField] Tower TowerPrefac;
+    
     public bool isconvert { get { return convert; } }
-
-    public void Start()
+    
+    public void OnMouseDown()
     {
-        parentTowers = GameObject.FindWithTag("parentTowers");
-    }
-    private void OnMouseDown()
-    {
-        if (convert==true) 
+        if (convert) 
         {
-
-            GameObject newTower= Instantiate(towers, transform.position, Quaternion.identity);
-            newTower.transform.parent = parentTowers.transform;
-            convert = false;
-
+            bool costTower= TowerPrefac.InstTower(TowerPrefac, transform.position); 
+      
+            convert=!costTower;
+            
         }
     }
 }

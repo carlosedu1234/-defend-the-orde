@@ -9,6 +9,7 @@ public class targetenemy : MonoBehaviour
     [SerializeField] Transform waypint;
     [SerializeField] float range=15f;
     Transform target;
+    
     // Start is called before the first frame update
     
     void Update()
