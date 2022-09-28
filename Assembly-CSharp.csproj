@@ -56,16 +56,19 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Banck\Banck.cs" />
     <Compile Include="Assets\Enemy\EnemyMove.cs" />
     <Compile Include="Assets\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Floorcoordenates\WayPint.cs" />
     <Compile Include="Assets\Enemy\EnemySpaw.cs" />
+    <Compile Include="Assets\Towers\Tower.cs" />
+    <Compile Include="Assets\Banck\Score.cs" />
     <Compile Include="Assets\Floorcoordenates\Coordenadas.cs" />
     <Compile Include="Assets\Towers\targetenemy.cs" />
     <Compile Include="Assets\Enemy\Enemy.cs" />
-    <Compile Include="Assets\Banck\Banck.cs" />
-    <Compile Include="Assets\Towers\Tower.cs" />
-    <Compile Include="Assets\Banck\Score.cs" />
+    <Compile Include="Assets\Boton_Mercado\DropDonw.cs" />
+    <Compile Include="Assets\Boton_Mercado\Boton.cs" />
+    <Compile Include="Assets\Boton_Mercado\MejoraTorreta.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

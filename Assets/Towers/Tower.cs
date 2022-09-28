@@ -5,9 +5,18 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [SerializeField] int cost = 50;
-    
-    Banck bank;
+    [SerializeField] float fastAtack = 1;
+    ParticleSystem fast;
    
+    Banck bank;
+
+
+    public void Update()
+    {
+        fast = FindObjectOfType<ParticleSystem>();
+        ControlFast();
+
+    }
 
     public bool InstTower(Tower tower, Vector3 position)
     {
@@ -25,6 +34,17 @@ public class Tower : MonoBehaviour
             return true;
         }
         return false;
+
+    }
+
+
+    public void ControlFast() {
+
+
+        var vel = fast.emission;
+        vel.rateOverTime = fastAtack;
+
+
 
     }
 
