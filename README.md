@@ -2,8 +2,8 @@
 
 ## Carlos Riaño
    
-* [linkedin ](www.linkedin.com/in/carlosedu1234/)
-* P[ortafolio](http://127.0.0.1:5500/index.html#/)
+* [linkedin ](www.linkedin.com/in/carlosedu1234)
+* [Portafolio](http://127.0.0.1:5500/index.html#/)
 
 ## INTRODUCTION
 
