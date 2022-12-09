@@ -1,16 +1,9 @@
 # Defend-the-orde
 
-## CONTENTS OF THIS FILE
+## Carlos Riaño
    
-* Introduction
-* Requirements
-* Recommended
-* Installation
-* Configuration
-* Troubleshooting
-* FAQ
-* Maintainers
-
+* linkedin (www.linkedin.com/in/carlosedu1234)
+* Portafolio (http://127.0.0.1:5500/index.html#)
 
 ## INTRODUCTION
 
