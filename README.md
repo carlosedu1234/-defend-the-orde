@@ -14,8 +14,9 @@ This is a medieval game where you have to place the towers strategically to be a
 ## GAME FEACTURES
 
 game mode
-with the mouse pointer clicking on the map where the turret will automatically be placed, which will cost 50 gold coins
-- for each enemy you defeat you will get 15
+with the mouse pointer clicking on the map where the turret will automatically be placed
+-which will cost 50 gold coins
+-for each enemy you defeat you will get 15
 -When you defeat your enemies, they will hurt, increasing their life little by little to increase their difficulty
 
 
